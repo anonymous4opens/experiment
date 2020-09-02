@@ -21,7 +21,7 @@ cat listVideo.csv | while read line
     for x264config in $x64configs
     do
         echo "Processing: " $x264config
-        csvLine=`sh $x264config $newPath`
+        csvLine=`bash $x264config $newPath`
         echo "$csvLine" >> $csvOutput
     done
     rm $newPath
